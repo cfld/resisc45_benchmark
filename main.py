@@ -237,5 +237,9 @@ for epoch in range(args.epochs):
         "time"      : time() - t,
     }))
     sys.stdout.flush()
-    
+
+# --
+# Final accuracy
+
 valid = model.eval_epoch(dataloader_valid)
+print(json.dumps(valid))
